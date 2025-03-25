@@ -3,3 +3,4 @@ firestore/.cache
 
 .idea
 .vscode
+cc_cloud_run/__pycache__/*.pyc
