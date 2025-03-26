@@ -31,13 +31,17 @@ async def read_root(request: Request):
     for v in votes:
         vote_data.append(v.to_dict())
 
+    # Count the number of "TABS" and "SPACES" votes
+    tabs_count = sum(1 for vote in vote_data if vote['team'] == 'TABS')
+    spaces_count = sum(1 for vote in vote_data if vote['team'] == 'SPACES')
+
     # ====================================
     # ++++ STOP CODE ++++
     # ====================================
     return templates.TemplateResponse("index.html", {
         "request": request,
-        "tabs_count": 28,
-        "spaces_count": 28,
+        "tabs_count": tabs_count,
+        "spaces_count": spaces_count,
         "recent_votes": vote_data
     })
 
