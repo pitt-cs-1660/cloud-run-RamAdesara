@@ -13,9 +13,9 @@
  * Firebase configuration
  * @type {{apiKey: string, authDomain: string}}
  */
-const config = {
+const firebaseConfig = {
   apiKey: "AIzaSyDUowM5SOAeZJaeIF1rPJykwPozHlFdFeI",
   authDomain: "vote-counter-c917c.firebaseapp.com",
 };
 
-export default config;
+export default firebaseConfig;
