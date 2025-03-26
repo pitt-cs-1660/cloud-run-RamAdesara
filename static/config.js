@@ -13,14 +13,14 @@
  * Firebase configuration
  * @type {{apiKey: string, authDomain: string}}
  */
-const firebaseConfig = {
-  apiKey: "AIzaSyDUowM5SOAeZJaeIF1rPJykwPozHlFdFeI",
-  authDomain: "vote-counter-c917c.firebaseapp.com",
-};
-
-export default firebaseConfig;
-
 const config = {
   apiKey: "AIzaSyCShPoegnSJu2H1Rm1Oh0DwlBQbjXiVOMc",
   authDomain: "assignment-3-3-26-2025-6-27pm.firebaseapp.com",
 };
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDUowM5SOAeZJaeIF1rPJykwPozHlFdFeI",
+//   authDomain: "vote-counter-c917c.firebaseapp.com",
+// };
+
+export default config;
