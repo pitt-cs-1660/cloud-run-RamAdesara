@@ -19,3 +19,8 @@ const firebaseConfig = {
 };
 
 export default firebaseConfig;
+
+const config = {
+  apiKey: "AIzaSyCShPoegnSJu2H1Rm1Oh0DwlBQbjXiVOMc",
+  authDomain: "assignment-3-3-26-2025-6-27pm.firebaseapp.com",
+};

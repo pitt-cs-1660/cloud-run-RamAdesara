@@ -26,3 +26,8 @@ gcloud run deploy tabs-vs-spaces \
 
 # 5
 gcloud run services logs read tabs-vs-spaces --region us-central1
+
+
+Client ID: 88724086190-a6ccjplsuj723g075bdbluauvgvqd6bs.apps.googleusercontent.com
+
+Client secret: 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
