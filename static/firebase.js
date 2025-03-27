@@ -135,6 +135,7 @@ async function vote(team) {
       const result = await response.json();
       console.log("Vote submitted successfully: ", result);
       window.alert("Vote submitted successfully!");
+      window.location.reload();
 
     } catch (err) {
       console.log(`Error when submitting vote: ${err}`);
