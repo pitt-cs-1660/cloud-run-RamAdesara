@@ -1,0 +1,1948 @@
+2025-03-26 23:19:46 INFO:     Will watch for changes in these directories: ['/app']
+2025-03-26 23:19:46 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-03-26 23:19:46 INFO:     Started reloader process [1] using StatReload
+2025-03-26 23:19:48 INFO:     Started server process [3]
+2025-03-26 23:19:48 INFO:     Waiting for application startup.
+2025-03-26 23:19:48 INFO:     Application startup complete.
+2025-03-26 23:20:02 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:20:02 INFO:     169.254.169.126:23168 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:20:02 ERROR:    Exception in ASGI application
+2025-03-26 23:20:02 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:20:02              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:20:02     return await self.app(scope, receive, send)
+2025-03-26 23:20:02            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:20:02     await super().__call__(scope, receive, send)
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:20:02     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:20:02     raise exc
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:20:02     await self.app(scope, receive, _send)
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:20:02     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:20:02     raise exc
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:20:02     await app(scope, receive, sender)
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:20:02     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:20:02     await route.handle(scope, receive, send)
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:20:02     await self.app(scope, receive, send)
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:20:02     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:20:02     raise exc
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:20:02     await app(scope, receive, sender)
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:20:02     response = await f(request)
+2025-03-26 23:20:02                ^^^^^^^^^^^^^^^^
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:20:02     raw_response = await run_endpoint_function(
+2025-03-26 23:20:02                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:20:02     return await dependant.call(**values)
+2025-03-26 23:20:02            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:20:02   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:20:02     for v in votes:
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:20:02     return self._generator.__next__()
+2025-03-26 23:20:02            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:20:02     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:20:02                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:20:02     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:20:02                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:20:02     response = rpc(
+2025-03-26 23:20:02                ^^^^
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:20:02     return wrapped_func(*args, **kwargs)
+2025-03-26 23:20:02            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:20:02     return retry_target(
+2025-03-26 23:20:02            ^^^^^^^^^^^^^
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:20:02     _retry_error_helper(
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:20:02     raise final_exc from source_exc
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:20:02     result = target()
+2025-03-26 23:20:02              ^^^^^^^^
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:20:02     return func(*args, **kwargs)
+2025-03-26 23:20:02            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:20:02   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:20:02     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:20:02 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:20:02 domain: "googleapis.com"
+2025-03-26 23:20:02 metadata {
+2025-03-26 23:20:02   key: "service"
+2025-03-26 23:20:02   value: "firestore.googleapis.com"
+2025-03-26 23:20:02 }
+2025-03-26 23:20:02 metadata {
+2025-03-26 23:20:02   key: "serviceTitle"
+2025-03-26 23:20:02   value: "Cloud Firestore API"
+2025-03-26 23:20:02 }
+2025-03-26 23:20:02 metadata {
+2025-03-26 23:20:02   key: "containerInfo"
+2025-03-26 23:20:02   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:20:02 }
+2025-03-26 23:20:02 metadata {
+2025-03-26 23:20:02   key: "consumer"
+2025-03-26 23:20:02   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:20:02 }
+2025-03-26 23:20:02 metadata {
+2025-03-26 23:20:02   key: "activationUrl"
+2025-03-26 23:20:02   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:20:02 }
+2025-03-26 23:20:02 , locale: "en-US"
+2025-03-26 23:20:02 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:20:02 , links {
+2025-03-26 23:20:02   description: "Google developers console API activation"
+2025-03-26 23:20:02   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:20:02 }
+2025-03-26 23:20:02 ]
+2025-03-26 23:20:03 GET 404 https://tabs-vs-spaces-88724086190.us-central1.run.app/favicon.ico
+2025-03-26 23:20:03 INFO:     169.254.169.126:23182 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+2025-03-26 23:35:08 INFO:     Shutting down
+2025-03-26 23:35:08 INFO:     Waiting for application shutdown.
+2025-03-26 23:35:08 INFO:     Application shutdown complete.
+2025-03-26 23:35:08 INFO:     Finished server process [3]
+2025-03-26 23:35:08 INFO:     Stopping reloader process [1]
+2025-03-26 23:39:03 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:39:04 INFO:     Will watch for changes in these directories: ['/app']
+2025-03-26 23:39:04 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-03-26 23:39:04 INFO:     Started reloader process [1] using StatReload
+2025-03-26 23:39:06 INFO:     Started server process [3]
+2025-03-26 23:39:06 INFO:     Waiting for application startup.
+2025-03-26 23:39:06 INFO:     Application startup complete.
+2025-03-26 23:39:06 INFO:     169.254.169.126:11148 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:39:06 ERROR:    Exception in ASGI application
+2025-03-26 23:39:06 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:39:06              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:39:06     return await self.app(scope, receive, send)
+2025-03-26 23:39:06            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:39:06     await super().__call__(scope, receive, send)
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:39:06     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:39:06     raise exc
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:39:06     await self.app(scope, receive, _send)
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:39:06     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:39:06     raise exc
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:39:06     await app(scope, receive, sender)
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:39:06     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:39:06     await route.handle(scope, receive, send)
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:39:06     await self.app(scope, receive, send)
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:39:06     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:39:06     raise exc
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:39:06     await app(scope, receive, sender)
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:39:06     response = await f(request)
+2025-03-26 23:39:06                ^^^^^^^^^^^^^^^^
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:39:06     raw_response = await run_endpoint_function(
+2025-03-26 23:39:06                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:39:06     return await dependant.call(**values)
+2025-03-26 23:39:06            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:39:06   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:39:06     for v in votes:
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:39:06     return self._generator.__next__()
+2025-03-26 23:39:06            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:39:06     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:39:06                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:39:06     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:39:06                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:39:06     response = rpc(
+2025-03-26 23:39:06                ^^^^
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:39:06     return wrapped_func(*args, **kwargs)
+2025-03-26 23:39:06            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:39:06     return retry_target(
+2025-03-26 23:39:06            ^^^^^^^^^^^^^
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:39:06     _retry_error_helper(
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:39:06     raise final_exc from source_exc
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:39:06     result = target()
+2025-03-26 23:39:06              ^^^^^^^^
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:39:06     return func(*args, **kwargs)
+2025-03-26 23:39:06            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:39:06   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:39:06     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:39:06 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:39:06 domain: "googleapis.com"
+2025-03-26 23:39:06 metadata {
+2025-03-26 23:39:06   key: "service"
+2025-03-26 23:39:06   value: "firestore.googleapis.com"
+2025-03-26 23:39:06 }
+2025-03-26 23:39:06 metadata {
+2025-03-26 23:39:06   key: "serviceTitle"
+2025-03-26 23:39:06   value: "Cloud Firestore API"
+2025-03-26 23:39:06 }
+2025-03-26 23:39:06 metadata {
+2025-03-26 23:39:06   key: "containerInfo"
+2025-03-26 23:39:06   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:39:06 }
+2025-03-26 23:39:06 metadata {
+2025-03-26 23:39:06   key: "consumer"
+2025-03-26 23:39:06   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:39:06 }
+2025-03-26 23:39:06 metadata {
+2025-03-26 23:39:06   key: "activationUrl"
+2025-03-26 23:39:06   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:39:06 }
+2025-03-26 23:39:06 , locale: "en-US"
+2025-03-26 23:39:06 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:39:06 , links {
+2025-03-26 23:39:06   description: "Google developers console API activation"
+2025-03-26 23:39:06   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:39:06 }
+2025-03-26 23:39:06 ]
+2025-03-26 23:40:21 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:21 INFO:     169.254.169.126:27944 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:21 ERROR:    Exception in ASGI application
+2025-03-26 23:40:21 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:21              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:21     return await self.app(scope, receive, send)
+2025-03-26 23:40:21            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:21     await super().__call__(scope, receive, send)
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:21     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:21     raise exc
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:21     await self.app(scope, receive, _send)
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:21     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:21     raise exc
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:21     await app(scope, receive, sender)
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:21     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:21     await route.handle(scope, receive, send)
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:21     await self.app(scope, receive, send)
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:21     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:21     raise exc
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:21     await app(scope, receive, sender)
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:21     response = await f(request)
+2025-03-26 23:40:21                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:21     raw_response = await run_endpoint_function(
+2025-03-26 23:40:21                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:21     return await dependant.call(**values)
+2025-03-26 23:40:21            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:21   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:21     for v in votes:
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:21     return self._generator.__next__()
+2025-03-26 23:40:21            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:21     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:21                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:21     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:21                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:21     response = rpc(
+2025-03-26 23:40:21                ^^^^
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:21     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:21            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:21     return retry_target(
+2025-03-26 23:40:21            ^^^^^^^^^^^^^
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:21     _retry_error_helper(
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:21     raise final_exc from source_exc
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:21     result = target()
+2025-03-26 23:40:21              ^^^^^^^^
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:21     return func(*args, **kwargs)
+2025-03-26 23:40:21            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:21   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:21     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:21 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:21 domain: "googleapis.com"
+2025-03-26 23:40:21 metadata {
+2025-03-26 23:40:21   key: "service"
+2025-03-26 23:40:21   value: "firestore.googleapis.com"
+2025-03-26 23:40:21 }
+2025-03-26 23:40:21 metadata {
+2025-03-26 23:40:21   key: "serviceTitle"
+2025-03-26 23:40:21   value: "Cloud Firestore API"
+2025-03-26 23:40:21 }
+2025-03-26 23:40:21 metadata {
+2025-03-26 23:40:21   key: "containerInfo"
+2025-03-26 23:40:21   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:21 }
+2025-03-26 23:40:21 metadata {
+2025-03-26 23:40:21   key: "consumer"
+2025-03-26 23:40:21   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:21 }
+2025-03-26 23:40:21 metadata {
+2025-03-26 23:40:21   key: "activationUrl"
+2025-03-26 23:40:21   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:21 }
+2025-03-26 23:40:21 , locale: "en-US"
+2025-03-26 23:40:21 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:21 , links {
+2025-03-26 23:40:21   description: "Google developers console API activation"
+2025-03-26 23:40:21   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:21 }
+2025-03-26 23:40:21 ]
+2025-03-26 23:40:23 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:23 INFO:     169.254.169.126:27960 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:23 ERROR:    Exception in ASGI application
+2025-03-26 23:40:23 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:23              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:23     return await self.app(scope, receive, send)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:23     await super().__call__(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:23     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:23     raise exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:23     await self.app(scope, receive, _send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:23     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:23     raise exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:23     await app(scope, receive, sender)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:23     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:23     await route.handle(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:23     await self.app(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:23     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:23     raise exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:23     await app(scope, receive, sender)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:23     response = await f(request)
+2025-03-26 23:40:23                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:23     raw_response = await run_endpoint_function(
+2025-03-26 23:40:23                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:23     return await dependant.call(**values)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:23     for v in votes:
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:23     return self._generator.__next__()
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:23     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:23                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:23     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:23                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:23     response = rpc(
+2025-03-26 23:40:23                ^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:23     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:23     return retry_target(
+2025-03-26 23:40:23            ^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:23     _retry_error_helper(
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:23     raise final_exc from source_exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:23     result = target()
+2025-03-26 23:40:23              ^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:23     return func(*args, **kwargs)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:23     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:23 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:23 domain: "googleapis.com"
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "service"
+2025-03-26 23:40:23   value: "firestore.googleapis.com"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "serviceTitle"
+2025-03-26 23:40:23   value: "Cloud Firestore API"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "containerInfo"
+2025-03-26 23:40:23   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "consumer"
+2025-03-26 23:40:23   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "activationUrl"
+2025-03-26 23:40:23   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 , locale: "en-US"
+2025-03-26 23:40:23 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:23 , links {
+2025-03-26 23:40:23   description: "Google developers console API activation"
+2025-03-26 23:40:23   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 ]
+2025-03-26 23:40:23 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:23 INFO:     169.254.169.126:27976 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:23 ERROR:    Exception in ASGI application
+2025-03-26 23:40:23 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:23              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:23     return await self.app(scope, receive, send)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:23     await super().__call__(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:23     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:23     raise exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:23     await self.app(scope, receive, _send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:23     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:23     raise exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:23     await app(scope, receive, sender)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:23     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:23     await route.handle(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:23     await self.app(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:23     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:23     raise exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:23     await app(scope, receive, sender)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:23     response = await f(request)
+2025-03-26 23:40:23                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:23     raw_response = await run_endpoint_function(
+2025-03-26 23:40:23                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:23     return await dependant.call(**values)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:23     for v in votes:
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:23     return self._generator.__next__()
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:23     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:23                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:23     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:23                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:23     response = rpc(
+2025-03-26 23:40:23                ^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:23     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:23     return retry_target(
+2025-03-26 23:40:23            ^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:23     _retry_error_helper(
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:23     raise final_exc from source_exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:23     result = target()
+2025-03-26 23:40:23              ^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:23     return func(*args, **kwargs)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:23     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:23 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:23 domain: "googleapis.com"
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "service"
+2025-03-26 23:40:23   value: "firestore.googleapis.com"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "serviceTitle"
+2025-03-26 23:40:23   value: "Cloud Firestore API"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "containerInfo"
+2025-03-26 23:40:23   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "consumer"
+2025-03-26 23:40:23   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "activationUrl"
+2025-03-26 23:40:23   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 , locale: "en-US"
+2025-03-26 23:40:23 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:23 , links {
+2025-03-26 23:40:23   description: "Google developers console API activation"
+2025-03-26 23:40:23   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 ]
+2025-03-26 23:40:23 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:23 INFO:     169.254.169.126:27992 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:23 ERROR:    Exception in ASGI application
+2025-03-26 23:40:23 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:23              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:23     return await self.app(scope, receive, send)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:23     await super().__call__(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:23     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:23     raise exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:23     await self.app(scope, receive, _send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:23     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:23     raise exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:23     await app(scope, receive, sender)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:23     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:23     await route.handle(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:23     await self.app(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:23     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:23     raise exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:23     await app(scope, receive, sender)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:23     response = await f(request)
+2025-03-26 23:40:23                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:23     raw_response = await run_endpoint_function(
+2025-03-26 23:40:23                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:23     return await dependant.call(**values)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:23     for v in votes:
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:23     return self._generator.__next__()
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:23     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:23                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:23     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:23                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:23     response = rpc(
+2025-03-26 23:40:23                ^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:23     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:23     return retry_target(
+2025-03-26 23:40:23            ^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:23     _retry_error_helper(
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:23     raise final_exc from source_exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:23     result = target()
+2025-03-26 23:40:23              ^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:23     return func(*args, **kwargs)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:23     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:23 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:23 domain: "googleapis.com"
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "service"
+2025-03-26 23:40:23   value: "firestore.googleapis.com"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "serviceTitle"
+2025-03-26 23:40:23   value: "Cloud Firestore API"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "containerInfo"
+2025-03-26 23:40:23   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "consumer"
+2025-03-26 23:40:23   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "activationUrl"
+2025-03-26 23:40:23   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 , locale: "en-US"
+2025-03-26 23:40:23 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:23 , links {
+2025-03-26 23:40:23   description: "Google developers console API activation"
+2025-03-26 23:40:23   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 ]
+2025-03-26 23:40:23 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:23 INFO:     169.254.169.126:28000 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:23 ERROR:    Exception in ASGI application
+2025-03-26 23:40:23 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:23              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:23     return await self.app(scope, receive, send)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:23     await super().__call__(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:23     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:23     raise exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:23     await self.app(scope, receive, _send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:23     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:23     raise exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:23     await app(scope, receive, sender)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:23     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:23     await route.handle(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:23     await self.app(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:23     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:23     raise exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:23     await app(scope, receive, sender)
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:23     response = await f(request)
+2025-03-26 23:40:23                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:23     raw_response = await run_endpoint_function(
+2025-03-26 23:40:23                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:23     return await dependant.call(**values)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:23     for v in votes:
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:23     return self._generator.__next__()
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:23     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:23                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:23     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:23                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:23     response = rpc(
+2025-03-26 23:40:23                ^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:23     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:23     return retry_target(
+2025-03-26 23:40:23            ^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:23     _retry_error_helper(
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:23     raise final_exc from source_exc
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:23     result = target()
+2025-03-26 23:40:23              ^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:23     return func(*args, **kwargs)
+2025-03-26 23:40:23            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:23   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:23     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:23 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:23 domain: "googleapis.com"
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "service"
+2025-03-26 23:40:23   value: "firestore.googleapis.com"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "serviceTitle"
+2025-03-26 23:40:23   value: "Cloud Firestore API"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "containerInfo"
+2025-03-26 23:40:23   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "consumer"
+2025-03-26 23:40:23   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 metadata {
+2025-03-26 23:40:23   key: "activationUrl"
+2025-03-26 23:40:23   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 , locale: "en-US"
+2025-03-26 23:40:23 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:23 , links {
+2025-03-26 23:40:23   description: "Google developers console API activation"
+2025-03-26 23:40:23   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:23 }
+2025-03-26 23:40:23 ]
+2025-03-26 23:40:24 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:24 INFO:     169.254.169.126:28016 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:24 ERROR:    Exception in ASGI application
+2025-03-26 23:40:24 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:24              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:24     return await self.app(scope, receive, send)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:24     await super().__call__(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:24     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:24     await self.app(scope, receive, _send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:24     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:24     await app(scope, receive, sender)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:24     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:24     await route.handle(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:24     await self.app(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:24     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:24     await app(scope, receive, sender)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:24     response = await f(request)
+2025-03-26 23:40:24                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:24     raw_response = await run_endpoint_function(
+2025-03-26 23:40:24                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:24     return await dependant.call(**values)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:24     for v in votes:
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:24     return self._generator.__next__()
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:24     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:24                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:24     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:24                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:24     response = rpc(
+2025-03-26 23:40:24                ^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:24     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:24     return retry_target(
+2025-03-26 23:40:24            ^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:24     _retry_error_helper(
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:24     raise final_exc from source_exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:24     result = target()
+2025-03-26 23:40:24              ^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:24     return func(*args, **kwargs)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:24     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:24 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:24 domain: "googleapis.com"
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "service"
+2025-03-26 23:40:24   value: "firestore.googleapis.com"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "serviceTitle"
+2025-03-26 23:40:24   value: "Cloud Firestore API"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "containerInfo"
+2025-03-26 23:40:24   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "consumer"
+2025-03-26 23:40:24   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "activationUrl"
+2025-03-26 23:40:24   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 , locale: "en-US"
+2025-03-26 23:40:24 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:24 , links {
+2025-03-26 23:40:24   description: "Google developers console API activation"
+2025-03-26 23:40:24   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 ]
+2025-03-26 23:40:24 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:24 INFO:     169.254.169.126:28022 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:24 ERROR:    Exception in ASGI application
+2025-03-26 23:40:24 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:24              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:24     return await self.app(scope, receive, send)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:24     await super().__call__(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:24     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:24     await self.app(scope, receive, _send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:24     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:24     await app(scope, receive, sender)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:24     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:24     await route.handle(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:24     await self.app(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:24     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:24     await app(scope, receive, sender)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:24     response = await f(request)
+2025-03-26 23:40:24                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:24     raw_response = await run_endpoint_function(
+2025-03-26 23:40:24                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:24     return await dependant.call(**values)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:24     for v in votes:
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:24     return self._generator.__next__()
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:24     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:24                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:24     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:24                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:24     response = rpc(
+2025-03-26 23:40:24                ^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:24     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:24     return retry_target(
+2025-03-26 23:40:24            ^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:24     _retry_error_helper(
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:24     raise final_exc from source_exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:24     result = target()
+2025-03-26 23:40:24              ^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:24     return func(*args, **kwargs)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:24     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:24 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:24 domain: "googleapis.com"
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "service"
+2025-03-26 23:40:24   value: "firestore.googleapis.com"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "serviceTitle"
+2025-03-26 23:40:24   value: "Cloud Firestore API"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "containerInfo"
+2025-03-26 23:40:24   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "consumer"
+2025-03-26 23:40:24   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "activationUrl"
+2025-03-26 23:40:24   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 , locale: "en-US"
+2025-03-26 23:40:24 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:24 , links {
+2025-03-26 23:40:24   description: "Google developers console API activation"
+2025-03-26 23:40:24   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 ]
+2025-03-26 23:40:24 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:24 INFO:     169.254.169.126:28038 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:24 ERROR:    Exception in ASGI application
+2025-03-26 23:40:24 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:24              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:24     return await self.app(scope, receive, send)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:24     await super().__call__(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:24     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:24     await self.app(scope, receive, _send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:24     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:24     await app(scope, receive, sender)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:24     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:24     await route.handle(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:24     await self.app(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:24     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:24     await app(scope, receive, sender)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:24     response = await f(request)
+2025-03-26 23:40:24                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:24     raw_response = await run_endpoint_function(
+2025-03-26 23:40:24                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:24     return await dependant.call(**values)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:24     for v in votes:
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:24     return self._generator.__next__()
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:24     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:24                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:24     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:24                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:24     response = rpc(
+2025-03-26 23:40:24                ^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:24     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:24     return retry_target(
+2025-03-26 23:40:24            ^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:24     _retry_error_helper(
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:24     raise final_exc from source_exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:24     result = target()
+2025-03-26 23:40:24              ^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:24     return func(*args, **kwargs)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:24     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:24 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:24 domain: "googleapis.com"
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "service"
+2025-03-26 23:40:24   value: "firestore.googleapis.com"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "serviceTitle"
+2025-03-26 23:40:24   value: "Cloud Firestore API"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "containerInfo"
+2025-03-26 23:40:24   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "consumer"
+2025-03-26 23:40:24   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "activationUrl"
+2025-03-26 23:40:24   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 , locale: "en-US"
+2025-03-26 23:40:24 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:24 , links {
+2025-03-26 23:40:24   description: "Google developers console API activation"
+2025-03-26 23:40:24   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 ]
+2025-03-26 23:40:24 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:24 INFO:     169.254.169.126:28046 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:24 ERROR:    Exception in ASGI application
+2025-03-26 23:40:24 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:24              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:24     return await self.app(scope, receive, send)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:24     await super().__call__(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:24     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:24     await self.app(scope, receive, _send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:24     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:24     await app(scope, receive, sender)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:24     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:24     await route.handle(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:24     await self.app(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:24     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:24     await app(scope, receive, sender)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:24     response = await f(request)
+2025-03-26 23:40:24                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:24     raw_response = await run_endpoint_function(
+2025-03-26 23:40:24                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:24     return await dependant.call(**values)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:24     for v in votes:
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:24     return self._generator.__next__()
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:24     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:24                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:24     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:24                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:24     response = rpc(
+2025-03-26 23:40:24                ^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:24     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:24     return retry_target(
+2025-03-26 23:40:24            ^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:24     _retry_error_helper(
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:24     raise final_exc from source_exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:24     result = target()
+2025-03-26 23:40:24              ^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:24     return func(*args, **kwargs)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:24     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:24 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:24 domain: "googleapis.com"
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "service"
+2025-03-26 23:40:24   value: "firestore.googleapis.com"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "serviceTitle"
+2025-03-26 23:40:24   value: "Cloud Firestore API"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "containerInfo"
+2025-03-26 23:40:24   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "consumer"
+2025-03-26 23:40:24   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "activationUrl"
+2025-03-26 23:40:24   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 , locale: "en-US"
+2025-03-26 23:40:24 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:24 , links {
+2025-03-26 23:40:24   description: "Google developers console API activation"
+2025-03-26 23:40:24   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 ]
+2025-03-26 23:40:24 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:24 INFO:     169.254.169.126:28068 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:24 ERROR:    Exception in ASGI application
+2025-03-26 23:40:24 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:24              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:24     return await self.app(scope, receive, send)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:24     await super().__call__(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:24     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:24     await self.app(scope, receive, _send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:24     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:24     await app(scope, receive, sender)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:24     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:24     await route.handle(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:24     await self.app(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:24     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:24     await app(scope, receive, sender)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:24     response = await f(request)
+2025-03-26 23:40:24                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:24     raw_response = await run_endpoint_function(
+2025-03-26 23:40:24                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:24     return await dependant.call(**values)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:24     for v in votes:
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:24     return self._generator.__next__()
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:24     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:24                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:24     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:24                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:24     response = rpc(
+2025-03-26 23:40:24                ^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:24     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:24     return retry_target(
+2025-03-26 23:40:24            ^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:24     _retry_error_helper(
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:24     raise final_exc from source_exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:24     result = target()
+2025-03-26 23:40:24              ^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:24     return func(*args, **kwargs)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:24     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:24 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:24 domain: "googleapis.com"
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "service"
+2025-03-26 23:40:24   value: "firestore.googleapis.com"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "serviceTitle"
+2025-03-26 23:40:24   value: "Cloud Firestore API"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "containerInfo"
+2025-03-26 23:40:24   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "consumer"
+2025-03-26 23:40:24   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "activationUrl"
+2025-03-26 23:40:24   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 , locale: "en-US"
+2025-03-26 23:40:24 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:24 , links {
+2025-03-26 23:40:24   description: "Google developers console API activation"
+2025-03-26 23:40:24   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 ]
+2025-03-26 23:40:24 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:24 INFO:     169.254.169.126:28082 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:24 ERROR:    Exception in ASGI application
+2025-03-26 23:40:24 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:24              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:24     return await self.app(scope, receive, send)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:24     await super().__call__(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:24     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:24     await self.app(scope, receive, _send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:24     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:24     await app(scope, receive, sender)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:24     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:24     await route.handle(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:24     await self.app(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:24     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:24     raise exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:24     await app(scope, receive, sender)
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:24     response = await f(request)
+2025-03-26 23:40:24                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:24     raw_response = await run_endpoint_function(
+2025-03-26 23:40:24                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:24     return await dependant.call(**values)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:24     for v in votes:
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:24     return self._generator.__next__()
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:24     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:24                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:24     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:24                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:24     response = rpc(
+2025-03-26 23:40:24                ^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:24     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:24     return retry_target(
+2025-03-26 23:40:24            ^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:24     _retry_error_helper(
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:24     raise final_exc from source_exc
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:24     result = target()
+2025-03-26 23:40:24              ^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:24     return func(*args, **kwargs)
+2025-03-26 23:40:24            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:24   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:24     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:24 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:24 domain: "googleapis.com"
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "service"
+2025-03-26 23:40:24   value: "firestore.googleapis.com"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "serviceTitle"
+2025-03-26 23:40:24   value: "Cloud Firestore API"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "containerInfo"
+2025-03-26 23:40:24   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "consumer"
+2025-03-26 23:40:24   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 metadata {
+2025-03-26 23:40:24   key: "activationUrl"
+2025-03-26 23:40:24   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 , locale: "en-US"
+2025-03-26 23:40:24 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:24 , links {
+2025-03-26 23:40:24   description: "Google developers console API activation"
+2025-03-26 23:40:24   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:24 }
+2025-03-26 23:40:24 ]
+2025-03-26 23:40:25 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:25 INFO:     169.254.169.126:28090 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:25 ERROR:    Exception in ASGI application
+2025-03-26 23:40:25 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:25              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:25     return await self.app(scope, receive, send)
+2025-03-26 23:40:25            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:25     await super().__call__(scope, receive, send)
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:25     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:25     raise exc
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:25     await self.app(scope, receive, _send)
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:25     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:25     raise exc
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:25     await app(scope, receive, sender)
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:25     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:25     await route.handle(scope, receive, send)
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:25     await self.app(scope, receive, send)
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:25     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:25     raise exc
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:25     await app(scope, receive, sender)
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:25     response = await f(request)
+2025-03-26 23:40:25                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:25     raw_response = await run_endpoint_function(
+2025-03-26 23:40:25                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:25     return await dependant.call(**values)
+2025-03-26 23:40:25            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:25   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:25     for v in votes:
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:25     return self._generator.__next__()
+2025-03-26 23:40:25            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:25     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:25                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:25     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:25                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:25     response = rpc(
+2025-03-26 23:40:25                ^^^^
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:25     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:25            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:25     return retry_target(
+2025-03-26 23:40:25            ^^^^^^^^^^^^^
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:25     _retry_error_helper(
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:25     raise final_exc from source_exc
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:25     result = target()
+2025-03-26 23:40:25              ^^^^^^^^
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:25     return func(*args, **kwargs)
+2025-03-26 23:40:25            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:25   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:25     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:25 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:25 domain: "googleapis.com"
+2025-03-26 23:40:25 metadata {
+2025-03-26 23:40:25   key: "service"
+2025-03-26 23:40:25   value: "firestore.googleapis.com"
+2025-03-26 23:40:25 }
+2025-03-26 23:40:25 metadata {
+2025-03-26 23:40:25   key: "serviceTitle"
+2025-03-26 23:40:25   value: "Cloud Firestore API"
+2025-03-26 23:40:25 }
+2025-03-26 23:40:25 metadata {
+2025-03-26 23:40:25   key: "containerInfo"
+2025-03-26 23:40:25   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:25 }
+2025-03-26 23:40:25 metadata {
+2025-03-26 23:40:25   key: "consumer"
+2025-03-26 23:40:25   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:25 }
+2025-03-26 23:40:25 metadata {
+2025-03-26 23:40:25   key: "activationUrl"
+2025-03-26 23:40:25   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:25 }
+2025-03-26 23:40:25 , locale: "en-US"
+2025-03-26 23:40:25 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:25 , links {
+2025-03-26 23:40:25   description: "Google developers console API activation"
+2025-03-26 23:40:25   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:25 }
+2025-03-26 23:40:25 ]
+2025-03-26 23:40:32 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:40:32 INFO:     169.254.169.126:30666 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:40:32 ERROR:    Exception in ASGI application
+2025-03-26 23:40:32 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:40:32              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:40:32     return await self.app(scope, receive, send)
+2025-03-26 23:40:32            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:40:32     await super().__call__(scope, receive, send)
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:40:32     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:40:32     raise exc
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:40:32     await self.app(scope, receive, _send)
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:40:32     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:32     raise exc
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:32     await app(scope, receive, sender)
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:40:32     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:40:32     await route.handle(scope, receive, send)
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:40:32     await self.app(scope, receive, send)
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:40:32     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:40:32     raise exc
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:40:32     await app(scope, receive, sender)
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:40:32     response = await f(request)
+2025-03-26 23:40:32                ^^^^^^^^^^^^^^^^
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:40:32     raw_response = await run_endpoint_function(
+2025-03-26 23:40:32                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:40:32     return await dependant.call(**values)
+2025-03-26 23:40:32            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:32   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:40:32     for v in votes:
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:40:32     return self._generator.__next__()
+2025-03-26 23:40:32            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:40:32     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:40:32                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:40:32     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:40:32                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:40:32     response = rpc(
+2025-03-26 23:40:32                ^^^^
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:40:32     return wrapped_func(*args, **kwargs)
+2025-03-26 23:40:32            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:40:32     return retry_target(
+2025-03-26 23:40:32            ^^^^^^^^^^^^^
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:40:32     _retry_error_helper(
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:40:32     raise final_exc from source_exc
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:40:32     result = target()
+2025-03-26 23:40:32              ^^^^^^^^
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:40:32     return func(*args, **kwargs)
+2025-03-26 23:40:32            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:40:32   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:40:32     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:40:32 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:40:32 domain: "googleapis.com"
+2025-03-26 23:40:32 metadata {
+2025-03-26 23:40:32   key: "service"
+2025-03-26 23:40:32   value: "firestore.googleapis.com"
+2025-03-26 23:40:32 }
+2025-03-26 23:40:32 metadata {
+2025-03-26 23:40:32   key: "serviceTitle"
+2025-03-26 23:40:32   value: "Cloud Firestore API"
+2025-03-26 23:40:32 }
+2025-03-26 23:40:32 metadata {
+2025-03-26 23:40:32   key: "containerInfo"
+2025-03-26 23:40:32   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:32 }
+2025-03-26 23:40:32 metadata {
+2025-03-26 23:40:32   key: "consumer"
+2025-03-26 23:40:32   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:32 }
+2025-03-26 23:40:32 metadata {
+2025-03-26 23:40:32   key: "activationUrl"
+2025-03-26 23:40:32   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:32 }
+2025-03-26 23:40:32 , locale: "en-US"
+2025-03-26 23:40:32 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:40:32 , links {
+2025-03-26 23:40:32   description: "Google developers console API activation"
+2025-03-26 23:40:32   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:40:32 }
+2025-03-26 23:40:32 ]
+2025-03-26 23:43:01 GET 500 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-26 23:43:01 INFO:     169.254.169.126:55772 - "GET / HTTP/1.1" 500 Internal Server Error
+2025-03-26 23:43:01 ERROR:    Exception in ASGI application
+2025-03-26 23:43:01 Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+2025-03-26 23:43:01              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-26 23:43:01     return await self.app(scope, receive, send)
+2025-03-26 23:43:01            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-26 23:43:01     await super().__call__(scope, receive, send)
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-26 23:43:01     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-26 23:43:01     raise exc
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-26 23:43:01     await self.app(scope, receive, _send)
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-26 23:43:01     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:43:01     raise exc
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:43:01     await app(scope, receive, sender)
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+2025-03-26 23:43:01     await self.middleware_stack(scope, receive, send)
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+2025-03-26 23:43:01     await route.handle(scope, receive, send)
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+2025-03-26 23:43:01     await self.app(scope, receive, send)
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+2025-03-26 23:43:01     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-26 23:43:01     raise exc
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-26 23:43:01     await app(scope, receive, sender)
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+2025-03-26 23:43:01     response = await f(request)
+2025-03-26 23:43:01                ^^^^^^^^^^^^^^^^
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+2025-03-26 23:43:01     raw_response = await run_endpoint_function(
+2025-03-26 23:43:01                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-26 23:43:01     return await dependant.call(**values)
+2025-03-26 23:43:01            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:43:01   File "/app/cc_cloud_run/main.py", line 31, in read_root
+2025-03-26 23:43:01     for v in votes:
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/stream_generator.py", line 58, in __next__
+2025-03-26 23:43:01     return self._generator.__next__()
+2025-03-26 23:43:01            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 400, in _make_stream
+2025-03-26 23:43:01     response_iterator, expected_prefix = self._get_stream_iterator(
+2025-03-26 23:43:01                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/query.py", line 250, in _get_stream_iterator
+2025-03-26 23:43:01     response_iterator = self._client._firestore_api.run_query(
+2025-03-26 23:43:01                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/google/cloud/firestore_v1/services/firestore/client.py", line 1558, in run_query
+2025-03-26 23:43:01     response = rpc(
+2025-03-26 23:43:01                ^^^^
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+2025-03-26 23:43:01     return wrapped_func(*args, **kwargs)
+2025-03-26 23:43:01            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+2025-03-26 23:43:01     return retry_target(
+2025-03-26 23:43:01            ^^^^^^^^^^^^^
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+2025-03-26 23:43:01     _retry_error_helper(
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+2025-03-26 23:43:01     raise final_exc from source_exc
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+2025-03-26 23:43:01     result = target()
+2025-03-26 23:43:01              ^^^^^^^^
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+2025-03-26 23:43:01     return func(*args, **kwargs)
+2025-03-26 23:43:01            ^^^^^^^^^^^^^^^^^^^^^
+2025-03-26 23:43:01   File "/usr/local/lib/python3.11/site-packages/google/api_core/grpc_helpers.py", line 174, in error_remapped_callable
+2025-03-26 23:43:01     raise exceptions.from_grpc_error(exc) from exc
+2025-03-26 23:43:01 google.api_core.exceptions.PermissionDenied: 403 Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+2025-03-26 23:43:01 domain: "googleapis.com"
+2025-03-26 23:43:01 metadata {
+2025-03-26 23:43:01   key: "service"
+2025-03-26 23:43:01   value: "firestore.googleapis.com"
+2025-03-26 23:43:01 }
+2025-03-26 23:43:01 metadata {
+2025-03-26 23:43:01   key: "serviceTitle"
+2025-03-26 23:43:01   value: "Cloud Firestore API"
+2025-03-26 23:43:01 }
+2025-03-26 23:43:01 metadata {
+2025-03-26 23:43:01   key: "containerInfo"
+2025-03-26 23:43:01   value: "assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:43:01 }
+2025-03-26 23:43:01 metadata {
+2025-03-26 23:43:01   key: "consumer"
+2025-03-26 23:43:01   value: "projects/assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:43:01 }
+2025-03-26 23:43:01 metadata {
+2025-03-26 23:43:01   key: "activationUrl"
+2025-03-26 23:43:01   value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:43:01 }
+2025-03-26 23:43:01 , locale: "en-US"
+2025-03-26 23:43:01 message: "Cloud Firestore API has not been used in project assignment-3-3-26-2025-6-27pm before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+2025-03-26 23:43:01 , links {
+2025-03-26 23:43:01   description: "Google developers console API activation"
+2025-03-26 23:43:01   url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=assignment-3-3-26-2025-6-27pm"
+2025-03-26 23:43:01 }
+2025-03-26 23:43:01 ]
+2025-03-26 23:58:08 INFO:     Shutting down
+2025-03-26 23:58:08 INFO:     Waiting for application shutdown.
+2025-03-26 23:58:08 INFO:     Application shutdown complete.
+2025-03-26 23:58:08 INFO:     Finished server process [3]
+2025-03-26 23:58:08 INFO:     Stopping reloader process [1]
+2025-03-27 00:21:59 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:22:00 INFO:     Will watch for changes in these directories: ['/app']
+2025-03-27 00:22:00 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-03-27 00:22:00 INFO:     Started reloader process [1] using StatReload
+2025-03-27 00:22:02 INFO:     Started server process [3]
+2025-03-27 00:22:02 INFO:     Waiting for application startup.
+2025-03-27 00:22:02 INFO:     Application startup complete.
+2025-03-27 00:22:03 INFO:     169.254.169.126:36278 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:22:03 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 00:22:03 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 00:22:03 INFO:     169.254.169.126:36288 - "GET /static/firebase.js HTTP/1.1" 200 OK
+2025-03-27 00:22:03 INFO:     169.254.169.126:36294 - "GET /static/config.js HTTP/1.1" 200 OK
+2025-03-27 00:24:31 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:24:31 INFO:     169.254.169.126:40800 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:39:38 INFO:     Shutting down
+2025-03-27 00:39:38 INFO:     Waiting for application shutdown.
+2025-03-27 00:39:38 INFO:     Application shutdown complete.
+2025-03-27 00:39:38 INFO:     Finished server process [3]
+2025-03-27 00:39:38 INFO:     Stopping reloader process [1]
+2025-03-27 00:40:38 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:40:39 INFO:     Will watch for changes in these directories: ['/app']
+2025-03-27 00:40:39 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-03-27 00:40:39 INFO:     Started reloader process [1] using StatReload
+2025-03-27 00:40:41 INFO:     Started server process [3]
+2025-03-27 00:40:41 INFO:     Waiting for application startup.
+2025-03-27 00:40:41 INFO:     Application startup complete.
+2025-03-27 00:40:41 INFO:     169.254.169.126:44852 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:40:41 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 00:40:42 INFO:     169.254.169.126:44862 - "GET /static/config.js HTTP/1.1" 304 Not Modified
+2025-03-27 00:41:03 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:41:03 INFO:     169.254.169.126:8854 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:42:30 INFO:     Will watch for changes in these directories: ['/app']
+2025-03-27 00:42:30 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-03-27 00:42:30 INFO:     Started reloader process [1] using StatReload
+2025-03-27 00:42:34 INFO:     Started server process [3]
+2025-03-27 00:42:34 INFO:     Waiting for application startup.
+2025-03-27 00:42:34 INFO:     Application startup complete.
+2025-03-27 00:42:36 GET 200 https://tabs-vs-spaces-sd7uinzfqq-uc.a.run.app/
+2025-03-27 00:42:36 GET 200 https://tabs-vs-spaces-sd7uinzfqq-uc.a.run.app/
+2025-03-27 00:42:36 INFO:     169.254.169.126:46906 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:42:36 INFO:     169.254.169.126:46910 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:42:36 GET 200 https://tabs-vs-spaces-sd7uinzfqq-uc.a.run.app/static/config.js
+2025-03-27 00:42:36 GET 200 https://tabs-vs-spaces-sd7uinzfqq-uc.a.run.app/static/firebase.js
+2025-03-27 00:42:36 INFO:     169.254.169.126:46912 - "GET /static/firebase.js HTTP/1.1" 200 OK
+2025-03-27 00:42:36 INFO:     169.254.169.126:46918 - "GET /static/config.js HTTP/1.1" 200 OK
+2025-03-27 00:42:36 GET 200 https://tabs-vs-spaces-sd7uinzfqq-uc.a.run.app/static/config.js
+2025-03-27 00:42:36 INFO:     169.254.169.126:46922 - "GET /static/config.js HTTP/1.1" 200 OK
+2025-03-27 00:42:36 GET 200 https://tabs-vs-spaces-sd7uinzfqq-uc.a.run.app/static/firebase.js
+2025-03-27 00:42:36 INFO:     169.254.169.126:46934 - "GET /static/firebase.js HTTP/1.1" 200 OK
+2025-03-27 00:43:55 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:43:55 INFO:     169.254.169.126:37020 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:43:55 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 00:43:55 INFO:     169.254.169.126:37030 - "GET /static/config.js HTTP/1.1" 200 OK
+2025-03-27 00:43:55 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 00:43:55 INFO:     169.254.169.126:37038 - "GET /static/firebase.js HTTP/1.1" 200 OK
+2025-03-27 00:44:48 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:44:48 INFO:     169.254.169.126:9584 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:05 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:45:05 INFO:     169.254.169.126:50068 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:05 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:45:05 INFO:     169.254.169.126:50076 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:05 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:45:06 INFO:     169.254.169.126:50092 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:06 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:45:06 INFO:     169.254.169.126:50108 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:06 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:45:06 INFO:     169.254.169.126:50118 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:06 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:45:06 INFO:     169.254.169.126:50126 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:06 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:45:06 INFO:     169.254.169.126:50140 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:06 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:45:06 INFO:     169.254.169.126:50150 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:06 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:45:06 INFO:     169.254.169.126:50154 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:07 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:45:07 INFO:     169.254.169.126:50166 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:07 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:45:07 INFO:     169.254.169.126:50182 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:17 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:45:17 INFO:     169.254.169.126:5478 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:45:17 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 00:45:17 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 00:45:17 INFO:     169.254.169.126:5482 - "GET /static/config.js HTTP/1.1" 200 OK
+2025-03-27 00:45:17 INFO:     169.254.169.126:5488 - "GET /static/firebase.js HTTP/1.1" 200 OK
+2025-03-27 00:46:07 INFO:     Shutting down
+2025-03-27 00:46:07 INFO:     Waiting for application shutdown.
+2025-03-27 00:46:07 INFO:     Application shutdown complete.
+2025-03-27 00:46:07 INFO:     Finished server process [3]
+2025-03-27 00:46:07 INFO:     Stopping reloader process [1]
+2025-03-27 00:52:55 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:52:55 INFO:     169.254.169.126:11794 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:52:55 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 00:52:55 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 00:52:55 INFO:     169.254.169.126:11808 - "GET /static/firebase.js HTTP/1.1" 200 OK
+2025-03-27 00:52:55 INFO:     169.254.169.126:11814 - "GET /static/config.js HTTP/1.1" 200 OK
+2025-03-27 00:56:05 INFO:     Will watch for changes in these directories: ['/app']
+2025-03-27 00:56:05 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-03-27 00:56:05 INFO:     Started reloader process [1] using StatReload
+2025-03-27 00:56:08 INFO:     Started server process [3]
+2025-03-27 00:56:08 INFO:     Waiting for application startup.
+2025-03-27 00:56:08 INFO:     Application startup complete.
+2025-03-27 00:56:14 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:56:14 INFO:     169.254.169.126:32124 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:56:14 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 00:56:14 INFO:     169.254.169.126:32140 - "GET /static/config.js HTTP/1.1" 200 OK
+2025-03-27 00:57:53 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:57:53 INFO:     169.254.169.126:44094 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:57:53 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 00:57:53 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 00:57:53 INFO:     169.254.169.126:44110 - "GET /static/config.js HTTP/1.1" 200 OK
+2025-03-27 00:57:53 INFO:     169.254.169.126:44120 - "GET /static/firebase.js HTTP/1.1" 200 OK
+2025-03-27 00:57:54 GET 404 https://tabs-vs-spaces-88724086190.us-central1.run.app/favicon.ico
+2025-03-27 00:57:54 INFO:     169.254.169.126:44126 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+2025-03-27 00:57:57 INFO:     Shutting down
+2025-03-27 00:57:57 INFO:     Waiting for application shutdown.
+2025-03-27 00:57:57 INFO:     Application shutdown complete.
+2025-03-27 00:57:57 INFO:     Finished server process [3]
+2025-03-27 00:57:57 INFO:     Stopping reloader process [1]
+2025-03-27 00:58:37 POST 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:58:38 INFO:     169.254.169.126:4744 - "POST / HTTP/1.1" 200 OK
+2025-03-27 00:58:41 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 00:58:41 INFO:     169.254.169.126:4752 - "GET / HTTP/1.1" 200 OK
+2025-03-27 00:58:42 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 00:58:42 INFO:     169.254.169.126:4758 - "GET /static/firebase.js HTTP/1.1" 304 Not Modified
+2025-03-27 01:13:43 INFO:     Shutting down
+2025-03-27 01:13:43 INFO:     Waiting for application shutdown.
+2025-03-27 01:13:43 INFO:     Application shutdown complete.
+2025-03-27 01:13:43 INFO:     Finished server process [3]
+2025-03-27 01:13:43 INFO:     Stopping reloader process [1]
+2025-03-27 02:46:36 INFO:     Will watch for changes in these directories: ['/app']
+2025-03-27 02:46:36 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-03-27 02:46:36 INFO:     Started reloader process [1] using StatReload
+2025-03-27 02:46:38 INFO:     Started server process [3]
+2025-03-27 02:46:38 INFO:     Waiting for application startup.
+2025-03-27 02:46:38 INFO:     Application startup complete.
+2025-03-27 02:46:46 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:46:46 INFO:     169.254.169.126:44418 - "GET / HTTP/1.1" 200 OK
+2025-03-27 02:46:46 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 02:46:46 INFO:     169.254.169.126:44420 - "GET /static/config.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:17 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:17 INFO:     169.254.169.126:36188 - "GET / HTTP/1.1" 200 OK
+2025-03-27 02:47:18 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 02:47:18 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 02:47:18 INFO:     169.254.169.126:36190 - "GET /static/config.js HTTP/1.1" 200 OK
+2025-03-27 02:47:18 INFO:     169.254.169.126:36196 - "GET /static/firebase.js HTTP/1.1" 200 OK
+2025-03-27 02:47:18 GET 404 https://tabs-vs-spaces-88724086190.us-central1.run.app/favicon.ico
+2025-03-27 02:47:18 INFO:     169.254.169.126:36200 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+2025-03-27 02:47:43 POST 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:43 INFO:     169.254.169.126:65208 - "POST / HTTP/1.1" 200 OK
+2025-03-27 02:47:45 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:45 INFO:     169.254.169.126:65216 - "GET / HTTP/1.1" 200 OK
+2025-03-27 02:47:45 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 02:47:45 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 02:47:45 INFO:     169.254.169.126:65226 - "GET /static/config.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:45 INFO:     169.254.169.126:65230 - "GET /static/firebase.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:47 POST 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:47 INFO:     169.254.169.126:65234 - "POST / HTTP/1.1" 200 OK
+2025-03-27 02:47:48 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:48 INFO:     169.254.169.126:65240 - "GET / HTTP/1.1" 200 OK
+2025-03-27 02:47:48 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 02:47:48 INFO:     169.254.169.126:65242 - "GET /static/firebase.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:48 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 02:47:48 INFO:     169.254.169.126:65250 - "GET /static/config.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:50 POST 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:50 INFO:     169.254.169.126:65262 - "POST / HTTP/1.1" 200 OK
+2025-03-27 02:47:51 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:51 INFO:     169.254.169.126:65272 - "GET / HTTP/1.1" 200 OK
+2025-03-27 02:47:51 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 02:47:51 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 02:47:51 INFO:     169.254.169.126:65276 - "GET /static/config.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:51 INFO:     169.254.169.126:65284 - "GET /static/firebase.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:52 POST 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:52 INFO:     169.254.169.126:41346 - "POST / HTTP/1.1" 200 OK
+2025-03-27 02:47:53 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:53 INFO:     169.254.169.126:41360 - "GET / HTTP/1.1" 200 OK
+2025-03-27 02:47:53 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 02:47:53 INFO:     169.254.169.126:41372 - "GET /static/firebase.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:53 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 02:47:53 INFO:     169.254.169.126:41378 - "GET /static/config.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:55 POST 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:55 INFO:     169.254.169.126:41388 - "POST / HTTP/1.1" 200 OK
+2025-03-27 02:47:56 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:56 INFO:     169.254.169.126:41400 - "GET / HTTP/1.1" 200 OK
+2025-03-27 02:47:56 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 02:47:56 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 02:47:56 INFO:     169.254.169.126:41414 - "GET /static/config.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:56 INFO:     169.254.169.126:41424 - "GET /static/firebase.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:57 POST 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:57 INFO:     169.254.169.126:41440 - "POST / HTTP/1.1" 200 OK
+2025-03-27 02:47:58 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:58 INFO:     169.254.169.126:41444 - "GET / HTTP/1.1" 200 OK
+2025-03-27 02:47:58 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 02:47:58 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 02:47:58 INFO:     169.254.169.126:41466 - "GET /static/config.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:58 INFO:     169.254.169.126:41452 - "GET /static/firebase.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:47:59 POST 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:47:59 INFO:     169.254.169.126:41478 - "POST / HTTP/1.1" 200 OK
+2025-03-27 02:48:00 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:48:00 INFO:     169.254.169.126:41482 - "GET / HTTP/1.1" 200 OK
+2025-03-27 02:48:00 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 02:48:00 INFO:     169.254.169.126:41490 - "GET /static/config.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:48:00 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 02:48:00 INFO:     169.254.169.126:41494 - "GET /static/firebase.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:48:01 POST 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:48:01 INFO:     169.254.169.126:41506 - "POST / HTTP/1.1" 200 OK
+2025-03-27 02:48:02 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:48:02 INFO:     169.254.169.126:41516 - "GET / HTTP/1.1" 200 OK
+2025-03-27 02:48:02 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 02:48:02 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 02:48:02 INFO:     169.254.169.126:25888 - "GET /static/config.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:48:02 INFO:     169.254.169.126:25896 - "GET /static/firebase.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:48:03 POST 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:48:03 INFO:     169.254.169.126:25900 - "POST / HTTP/1.1" 200 OK
+2025-03-27 02:48:04 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:48:04 INFO:     169.254.169.126:25904 - "GET / HTTP/1.1" 200 OK
+2025-03-27 02:48:04 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 02:48:04 GET 304 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 02:48:04 INFO:     169.254.169.126:25930 - "GET /static/config.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:48:04 INFO:     169.254.169.126:25920 - "GET /static/firebase.js HTTP/1.1" 304 Not Modified
+2025-03-27 02:48:37 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/
+2025-03-27 02:48:37 INFO:     169.254.169.126:37770 - "GET / HTTP/1.1" 200 OK
+2025-03-27 02:48:37 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/firebase.js
+2025-03-27 02:48:37 GET 200 https://tabs-vs-spaces-88724086190.us-central1.run.app/static/config.js
+2025-03-27 02:48:37 INFO:     169.254.169.126:37774 - "GET /static/firebase.js HTTP/1.1" 200 OK
+2025-03-27 02:48:37 INFO:     169.254.169.126:37786 - "GET /static/config.js HTTP/1.1" 200 OK
+2025-03-27 02:48:38 GET 404 https://tabs-vs-spaces-88724086190.us-central1.run.app/favicon.ico
+2025-03-27 02:48:38 INFO:     169.254.169.126:37798 - "GET /favicon.ico HTTP/1.1" 404 Not Found
