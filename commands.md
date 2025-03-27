@@ -2,7 +2,7 @@ REGION = us-central1
 PROJECT_ID = assignment-3-3-26-2025-6-27pm
 
 # 1
-gcloud builds submit --region us-central1 --tag us-central1-docker.pkg.dev/assignment-3-3-26-2025-6-27pm/tabs-vs-spaces/app:v1
+gcloud builds submit --region us-central1 --tag us-central1-docker.pkg.dev/assignment-3-3-26-2025-6-27pm/tabs-vs-spaces/app:v2
 
 # 2
 gcloud artifacts repositories add-iam-policy-binding tabs-vs-spaces \
